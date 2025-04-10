@@ -23,9 +23,9 @@ const SignUp = () => {
       alert("Passwords don't match!");
       return;
     }
-    // Here you would typically send data to your backend
+    
     alert(`Sign up successful for ${formData.email}`);
-    // Reset form
+    
     setFormData({
       name: '',
       email: '',

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CurrencyConverter from './components/CurrencyConverter';
 import Navbar from './components/Navbar';
+import SignUp from './components/SignUp';  
 import './App.css';
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       case 'settings':
         return <div className="page-content">Settings Panel</div>;
       case 'signup':
-        return <div className="page-content">Sign Up Form</div>;
+        return <SignUp />; 
       default:
         return <CurrencyConverter />;
     }

@@ -1,26 +1,22 @@
-/* Add these mobile styles at the bottom of your existing CSS */
-@media (max-width: 600px) {
-    .converter-container {
-      margin: 1rem;
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #eaf2f8;
+  }
+  
+  .page-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 600px) {
+    .page-content {
       padding: 1rem;
-      box-shadow: none;
-      border-radius: 0;
-    }
-  
-    .currency-selectors {
-      flex-direction: column;
-    }
-  
-    .swap-button {
-      margin: 0.5rem 0;
-      align-self: center;
-    }
-  
-    .result {
-      padding: 1rem;
-    }
-  
-    .result h2 {
-      font-size: 1.2rem;
     }
   }

@@ -12,7 +12,7 @@ const Navbar = ({ activeTab, setActiveTab }) => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo" onClick={() => setActiveTab('home')}>
-          Currency Converter
+          Girl Math
         </div>
         
         <div className={`navbar-tabs ${menuOpen ? 'active' : ''}`}>

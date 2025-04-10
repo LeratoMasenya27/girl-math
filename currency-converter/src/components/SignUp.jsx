@@ -36,7 +36,7 @@ const SignUp = () => {
 
   return (
     <div className="signup-container">
-      <h2>Create Your Account</h2>
+      <h2>Join the club</h2>
       <form onSubmit={handleSubmit} className="signup-form">
         <div className="form-group">
           <label htmlFor="name">Full Name</label>
@@ -88,10 +88,10 @@ const SignUp = () => {
           />
         </div>
         
-        <button type="submit" className="signup-button">Sign Up</button>
+        <button type="submit" className="signup-button">Sign Up & Justify!</button>
         
         <div className="login-link">
-          Already have an account? <span>Log in</span>
+          Part of the tribe? <span>Log in</span> make math fun!
         </div>
       </form>
     </div>

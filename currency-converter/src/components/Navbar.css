@@ -1,7 +1,7 @@
 .navbar {
-    background-color: #2c3e50;
+
     padding: 1rem 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
     position: relative;
   }
   
@@ -14,27 +14,34 @@
   }
   
   .navbar-logo {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
+    color: rgb(227, 100, 149);
+    font-size: 50px;
+    font-family: "Sacramento", cursive;
   }
   
   .navbar-tabs {
     display: flex;
-    gap: 1.5rem;
+    gap: 50px;
+    
   }
   
   .navbar-tab {
-    color: white;
+    color: rgb(232, 67, 133);
     background: none;
     border: none;
-    font-size: 1rem;
+    font-family: "Righteous", sans-serif;
+    font-style: normal;
+    font-size: 16px;
     font-weight: 500;
-    padding: 0.5rem 0;
+    padding: 10px 0;
     position: relative;
     cursor: pointer;
     transition: color 0.3s ease;
+
+  }
+  .navbar-tab:hover {
+    color: rgb(227, 100, 149);
+    text-decoration: underline;
   }
   
   .mobile-menu-button {
@@ -45,13 +52,7 @@
     font-size: 1.5rem;
     cursor: pointer;
   }
-  
-  .signup-tab {
-    background-color: #3498db;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  }
+ 
   
   /* Mobile Styles */
   @media (max-width: 768px) {
@@ -60,13 +61,13 @@
       top: 100%;
       left: 0;
       right: 0;
-      background-color: #2c3e50;
+      background-color: whitesmoke;
       flex-direction: column;
       gap: 0;
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease;
-      padding: 0 2rem;
+      padding: 0 8px;
     }
   
     .navbar-tabs.active {
@@ -78,9 +79,15 @@
       padding: 1rem 0;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
-  
+    
+    .navbar-logo {
+      font-size: 40px;
+        margin-left: 1rem;
+    }
+    
     .mobile-menu-button {
       display: block;
+      color: rgb(232, 67, 133);
     }
   
     .signup-tab {

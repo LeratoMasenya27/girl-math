@@ -2,7 +2,9 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #eaf2f8;
+  background: url(./components/asserts/Fotos\ de\ {{name}}\ -\ Descarga\ fotos\ gratis\ de\ gran\ calidad\ _\ Freepik.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .page-content {

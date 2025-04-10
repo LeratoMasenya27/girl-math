@@ -2,6 +2,7 @@
     background-color: #2c3e50;
     padding: 1rem 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
   }
   
   .navbar-container {
@@ -36,31 +37,13 @@
     transition: color 0.3s ease;
   }
   
-  .navbar-tab:hover {
-    color: #3498db;
-  }
-  
-  .navbar-tab::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #3498db;
-    transition: width 0.3s ease;
-  }
-  
-  .navbar-tab:hover::after {
-    width: 100%;
-  }
-  
-  .navbar-tab.active {
-    color: #3498db;
-  }
-  
-  .navbar-tab.active::after {
-    width: 100%;
+  .mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
   
   .signup-tab {
@@ -70,15 +53,37 @@
     transition: background-color 0.3s ease;
   }
   
-  .signup-tab:hover {
-    background-color: #2980b9;
-    color: white;
-  }
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .navbar-tabs {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #2c3e50;
+      flex-direction: column;
+      gap: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 2rem;
+    }
   
-  .signup-tab::after {
-    display: none;
-  }
+    .navbar-tabs.active {
+      max-height: 500px;
+      padding: 1rem 2rem;
+    }
   
-  .signup-tab.active {
-    background-color: #2980b9;
+    .navbar-tab {
+      padding: 1rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  
+    .mobile-menu-button {
+      display: block;
+    }
+  
+    .signup-tab {
+      margin-top: 1rem;
+    }
   }

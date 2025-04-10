@@ -80,6 +80,7 @@ const CurrencyConverter = () => {
   return (
     <div className="converter-container">
       <h1>Currency Converter</h1>
+      <h3>Because Splurging is Justified!</h3>
       
       {error && <div className="error-message">{error}</div>}
       
@@ -133,13 +134,15 @@ const CurrencyConverter = () => {
           onClick={handleConvert}
           disabled={isLoading}
         >
-          {isLoading ? 'Converting...' : 'Convert'}
+          {isLoading ? 'Converting...' : 'Convert & Justify!'}
         </button>
         
         {convertedAmount && !isLoading && (
           <div className="result">
+            
             <h2>
               {amount} {fromCurrency} = {convertedAmount} {toCurrency}
+    
             </h2>
             <div className="rate-info">
               1 {fromCurrency} = {exchangeRate} {toCurrency}
@@ -149,6 +152,7 @@ const CurrencyConverter = () => {
                 Last converted: {lastConverted.toLocaleTimeString()}
               </div>
             )}
+            <h4>If you pay cash, it’s free!</h4>
           </div>
         )}
       </div>

@@ -14,6 +14,153 @@
     box-sizing: border-box;
   }
   
+  .converter-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: acme;
+    font-weight: 400;
+  }
+  
+  .converter-container h1 {
+    text-align: center;
+    color: rgb(179, 114, 186);
+    margin-bottom: 2rem;
+  }
+
+  .converter-container h3 {
+    text-align: center;
+    color: rgb(245, 47, 120);
+    margin-bottom: 1rem;
+  }
+  
+  .converter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+  }
+  
+  .input-group label {
+    font-weight: 600;
+    color: rgb(186, 54, 109);
+    
+  }
+  
+  .input-group input,
+  .input-group select {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    color: rgb(8, 8, 8);
+    background: transparent;
+    border-radius: 30px;
+  }
+  
+  .input-group input:focus,
+  .input-group select:focus {
+    outline: none;
+    border-color: #e0329d;
+  }
+  
+  .currency-selectors {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+  
+  .swap-button {
+    padding: 0.75rem 1rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .swap-button:hover {
+    background-color: #e41996;
+  }
+
+  .convert-button {
+    padding: 0.75rem 1rem;
+    background-color: rgb(241, 21, 109);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: acme;
+    font-size: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .result {
+    text-align: center;
+    padding: 15px;
+    background-color: transparent;
+    border-radius: 5px;
+    color: rgb(241, 21, 109);
+  }
+  
+  .result h2 {
+    color: rgb(241, 21, 109);
+    margin-bottom: 2px;
+    background: transparent;
+  }
+  
+  .rate-info {
+    color: #d6328c;
+    font-size: 0.9rem;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 1rem;
+    color: #d1288b;
+  }
+  
+  .error-message {
+    padding: 0.75rem;
+    background-color: #fdecea;
+    color: #c62828;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 600px) {
+    .converter-container {
+      margin: 1rem;
+      padding: 1rem;
+    }
+    
+    .currency-selectors {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .swap-button {
+      align-self: center;
+      margin: 0.5rem 0;
+    }
+  }
   /* Mobile Styles */
   @media (max-width: 600px) {
     .page-content {

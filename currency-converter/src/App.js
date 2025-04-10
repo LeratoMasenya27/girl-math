@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CurrencyConverter from './components/CurrencyConverter';
+import Navbar from './components/Navbar';
 import './App.css';
 
 function App() {
+  const [activeTab, setActiveTab] = useState('home');
+
+  const renderTabContent = () => {
+    switch(activeTab) {
+      case 'blog':
+        return <div className="page-content">Blog Content Coming Soon</div>;
+      case 'settings':
+        return <div className="page-content">Settings Panel</div>;
+      case 'signup':
+        return <div className="page-content">Sign Up Form</div>;
+      default:
+        return <CurrencyConverter />;
+    }
+  };
+
   return (
     <div className="App">
-      <CurrencyConverter />
+      <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
+      {renderTabContent()}
     </div>
   );
 }

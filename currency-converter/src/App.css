@@ -1,9 +1,14 @@
 .App {
-  text-align: center;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   background-color: #eaf2f8;
-  padding: 20px;
+}
+
+.page-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
